@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   /* 예약 팝업창 */
-$(".closeBtn").click(function(){
+$(".btn_group_box>button").click(function(){
   $(".booking").css({display:"none"})
 })
 
