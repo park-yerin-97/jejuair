@@ -31,12 +31,8 @@ function Particle(x,y){
     }
     this.draw();
   }
-  /* this.draw(); */
   this.update();
 }
-
-/* const p= new Particle(100,100);
-p.draw();  */
 
 let particleArray=[];
 for(let i=0; i<30; i++){
@@ -44,7 +40,6 @@ for(let i=0; i<30; i++){
   const y=Math.random()*canvas.height;
   particleArray.push(new Particle(x,y));
 }
-//console.log(particleArray)
 
 function animate(){
   requestAnimationFrame(animate);

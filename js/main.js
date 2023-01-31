@@ -1,8 +1,10 @@
 $(document).ready(function(){
-/* 예약 팝업창 */
+
+  /* 예약 팝업창 */
 $(".closeBtn").click(function(){
   $(".booking").css({display:"none"})
 })
+
 /* 모바일메뉴열기 */
 $(".navBtn").click(function(){
   $(".main_nav").addClass("on");
