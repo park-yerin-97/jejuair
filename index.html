@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> 
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>제주항공</title>
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+
+  <!-- 예약 팝업창 -->
+  <div class="booking">
+    <!-- dots 효과 -->
+    <canvas id="canvas"></canvas>
+    <script src="js/dots.js"></script>
+    
+    <div class="booking_inner">
+      <div class="booking_inner_box">
+        <div class="select">
+          <div class="option">
+            <button type="button" class="on">왕복</button>
+            <button type="button">편도</button>
+          </div>
+          <div class="airport clearfix">
+            <button type="button" class="from">서울</button>
+            <button type="button" class="change"><img src="./img/change_btn.png" alt="변경"></button>
+            <button type="button" class="to">도착지</button>
+          </div>
+          <div id="date">
+            <label for="board">탑승일</label>
+            <input type="date" id="board">
+          </div>
+        </div>
+        <div class="passenger clearfix">
+          <div class="passenger_box">
+            <p>승객 수</p>
+            <button type="button">성인 1명</button>
+          </div>
+        </div>
+      </div> <!-- booking_inner_box -->
+      <div class="btn_group">
+        <div class="btn_group_box">
+          <button type="button" class="closeBtn">닫기</button>
+          <button type="button" class="detailBtn">자세히 보기</button>
+        </div>
+      </div>
+    </div> <!-- booking_inner_end -->
+  </div>
+ 
+  
+  <div class="wrap">
+    <!-- header -->
+    <header>
+      <div class="headerInner clearfix">
+        <button type="button" class="navBtn mobile">
+        메뉴
+        </button>
+        <h1><a href="#" class="ir_pm">제주항공</a></h1>
+        <div class="myPage"><a href="#">마이페이지</a></div>
+        <nav class="main_nav">
+          <h2 class="screen_out">주메뉴</h2>
+          <div class="navInner">
+            <button type="button" class="close">취소</button>
+            <div class="navInner_logo"></div>
+            <div class="search">검색</div>
+            <ul class="gnb clearfix">
+              <li><a href="#">예매</a>
+                <ul class="gnb_sub clearfix">
+                  <li><a href="#">항공권 예약</a>
+                    <ul>
+                      <li><a href="#">항공권 예매</a></li>
+                      <li><a href="#">최저가 항공권</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">예약 변경</a>
+                    <ul>
+                      <li><a href="#">항공권 변경</a></li>
+                      <li><a href="#">항공권 취소</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">운임 안내</a>
+                    <ul>
+                      <li><a href="#">국내선 운임</a></li>
+                      <li><a href="#">국제선 운임</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> <!-- 예매 end -->
+              <li><a href="#">공항</a>
+                <ul class="gnb_sub">
+                  <li><a href="#">수하물</a>
+                    <ul>
+                      <li><a href="#">수하물 안내</a></li>
+                      <li><a href="#">휴대 수하물</a></li>
+                      <li><a href="#">위탁 수하물</a></li>
+                      <li><a href="#">운송 제한 물품</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">체크인</a>
+                    <ul>
+                      <li><a href="#">사전 체크인</a></li>
+                      <li><a href="#">공항 체크인</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">탑승 절차</a>
+                    <ul>
+                      <li><a href="#">탑승 절차 안내</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> <!-- 공항 end -->
+              <li><a href="#">서비스</a>
+                <ul class="gnb_sub">
+                  <li><a href="#">부가서비스</a>
+                    <ul>
+                      <li><a href="#">사전 좌석 구매</a></li>
+                      <li><a href="#">사전 수하물</a></li>
+                      <li><a href="#">사전 기내식</a></li>
+                      <li><a href="#">여행자 보험</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">기내서비스</a>
+                    <ul>
+                      <li><a href="#">에어 카페</a></li>
+                      <li><a href="#">기내 면세</a></li>
+                      <li><a href="#">FUN 서비스</a></li>
+                      <li><a href="#">출입국 신고서 </a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">프리미엄 혜택</a>
+                    <ul>
+                      <li><a href="#">비즈니스 라이트</a></li>
+                      <li><a href="#">스포츠 멤버십</a></li>
+                      <li><a href="#">제휴 서비스</a></li>
+                      <li><a href="#">온라인몰 제이샵</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> <!-- 서비스 end -->
+              <li><a href="#">이벤트</a></li>
+            </ul>
+            <ul class="sns">
+              <li><a href="#">facebook</a></li>
+              <li><a href="#">instagram</a></li>
+              <li><a href="#">youtube</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+     </div>
+     
+    </header>
+    
+    <!-- visual -->
+    <div class="visual">
+      <video class="visual_mov" autoplay loop muted playsinline>
+        <source src="video/jejuair_mov.mp4">
+      </video>
+    </div>
+    
+    <!-- main -->
+    <main>
+      <!-- brand -->
+      <section class="brand">
+        <h2 class="screen_out">브랜드 섹션</h2>
+        <ul class="brand_content">
+          <li class="no1">
+            <div class="no1_txt">
+              <strong>대한민국 No.1 LCC 제주항공</strong>
+              <p>더 넓은 하늘로 고객과 함께 <span>행복한 경험을 나누고자 합니다.</span></p>
+            </div>
+          </li>
+          <li class="safe">
+            <strong>ready..</strong>
+            <svg class="ready" width="100%" height="100%">
+
+              <!-- 주황공 -->
+              <defs>
+                <path fill="none" d="M 33 159 C 44 -3 246 13 249 157 C 231 324 31 271 34 159 Z"></path>
+              </defs>
+              <rect x="10" y="10" rx="50" ry="50" width="25" height="25" fill="#F15A22">
+                <animateMotion
+                  attributeName="d"
+                  path="M 33 159 C 44 -3 246 13 249 157 C 231 324 31 271 34 159 Z"
+                  dur="3s"
+                  rotate="auto"
+                  repeatCount="indefinite"
+                  >
+                </animateMotion>
+              </rect>
+            
+              <!-- 파란공 -->
+              <defs>
+                <path fill="none" d="M 248 154 C 226 312 36 277 34 149 C 53 -18 246 18 248 154"></path>
+              </defs>
+                <rect x="10" y="10" rx="50" ry="50" width="25" height="25" fill="#00A7E1">
+                  <animateMotion
+                    attributeName="d"
+                    path="M 248 154 C 226 312 36 277 34 149 C 53 -18 246 18 248 154"
+                    dur="3s"
+                    rotate="auto"
+                    repeatCount="indefinite"
+                  >
+                  </animateMotion>
+                </rect>
+              </svg>
+          </li>
+          <li class="esg"> 
+            <div class="esg_txt">
+              <strong>기내 플라스틱 사용감소</strong>
+              <p>제주항공은 친환경 경영활동을 <span> 
+                기업의 사회적 책임을 다하기 위한</span> 최우선 가치로 인식합니다. </p>
+            </div>      
+          </li>
+        </ul>
+        <nav class="brand_nav clearfix">
+          <ul>
+            <li class="on"><a href="#">
+              대한민국 No.1
+            </a></li>
+            <li><a href="#">건강한 여행</a></li>
+            <li><a href="#">ESG 경영</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- hot -->
+      <section class="hot">
+        <div class="hot_box">
+          <div class="hot_txt">
+            <h2>지금 바로 떠나요!</h2>
+            <p>제주항공과 함께하는 hot 여행지</p>
+          </div>
+          <div class="hot_banner">
+              <div>
+                <img src="img/kota.png" alt="코타키나발루">
+                <p>서울/인천 - 코타키나발루</p>
+                <p>일반석(편도) KRW 151,200~</p>
+              </div>
+              <div>
+                <img src="img/singa.png" alt="싱가포르">
+                <p>부산 - 싱가포르</p>
+                <p>일반석(편도) KRW 321,300~</p>
+              </div>
+              <div>
+                <img src="img/busan.png" alt="부산">
+                <p>김포 - 부산</p>
+                <p>일반석(편도) KRW 37,300~</p>
+              </div>
+              <div>
+                <img src="img/huku.png" alt="후쿠오카">
+                <p>부산 - 후쿠오카</p>
+                <p>일반석(편도) KRW 74,000~</p>
+              </div>
+              <div>
+                <img src="img/jeju.png" alt="제주">
+                <p>김포 - 제주</p>
+                <p>일반석(편도) KRW 26,300~</p>
+              </div>
+          </div> <!-- hot_banner end-->
+          <div class="arrow">
+            <button type="button" class="left"></button>
+            <button type="button" class="right"></button>
+          </div>
+        </div> <!-- hot_box end-->
+      </section>
+
+      <!-- event -->
+      <section class="event clearfix">
+        <h2 class="screen_out">이벤트 섹션</h2>
+        <div class="ticket">
+          <div class="ticket_txt">
+            <strong>최저가 항공권</strong>
+            <p>CHEAPEST <span>FLIGHT TICKETS</span></p>
+            <p>예산에 적합한 항공권을 <span>지금 확인해보세요.</span></p>
+            <a href="#">확인하기</a>
+          </div>
+        </div>
+        <div class="ongoing">
+          <div class="ongoing_txt">
+            <strong>진행중인 이벤트</strong>
+            <p>ONGOING <span>EVENT</span></p>
+            <p>현재 진행중인 이벤트를 <span>확인해보세요.</span></p>
+            <a href="#">확인하기</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- check -->
+      <section class="check">
+        <div class="airIcon"></div>
+        <div class="check_box">
+          <h2>탑승전 확인</h2>
+          <p>부가서비스를 미리 예약하세요</p>
+          <nav class="check_nav clearfix">
+            <ul>
+              <li class="on"><a href="#">사전 좌석 구매</a></li>
+              <li><a href="#">사전 기내식</a></li>
+              <li><a href="#">사전 수하물</a></li>
+            </ul>
+          </nav>
+          <ul class="check_content clearfix">
+            <li>
+              <div class="seat_img"></div>
+              <div class="seat_txt">
+                <strong>사전 좌석 구매란?</strong>
+                <p>온라인으로 원하는 좌석을 <br>미리 구매하는 서비스입니다.</p>
+                <a href="#">구매하기</a>
+              </div>
+            </li>
+            <li>
+              <div class="food_img"></div>
+              <div class="food_txt">
+                <strong>사전 기내식이란?</strong>
+                <p>온라인으로 원하는 좌석을 <br>미리 구매하는 서비스입니다.</p>
+                <a href="#">구매하기</a>
+              </div>
+            </li>
+            <li>
+              <div class="lagage_img"></div>
+              <div class="lagage_txt">
+                <strong>사전 수하물이란?</strong>
+                <p>온라인으로 원하는 좌석을 <br>미리 구매하는 서비스입니다.</p>
+                <a href="#">구매하기</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+    </main>
+
+     <!-- footer -->
+     <footer>
+      <div class="footerInner clearfix">
+        <div class="footLeft pc">
+          <iframe class="footMov" src="https://www.youtube.com/embed/N8CyhlrCSm0?autoplay=1&mute=1&loop=1&playlist=N8CyhlrCSm0&controls=0" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="footRight">
+          <div class="foot_logo"></div>
+          <div class="infor01">
+            <span>(주) 제주항공</span>
+            <span>대표이사 : 김이배</span>
+            <p>사업자등록번호 : 616-81-50527 
+            </p>
+          </div>
+          <div class="infor02">
+            <p>제주특별자치도 제주시 신대로 64
+              <span>(연동, 건설공제회관 3층)</span>
+            </p>
+            <p>고객센터 1599-1500 (09:00~19:00)</p>
+          </div>
+          <div class="copyMenu">
+              <a href="#">회사소개</a>
+              <a href="#">ESG 경영</a>
+              <a href="#">투자정보</a>
+              <span>
+                <a href="#">채용안내</a>
+                <a href="#">개인정보처리방침</a>
+              </span>
+          </div>
+        </div>
+      </div>
+      <small>Copyright &copy; JEJUAIR. All Rights Reserved.</small>
+    </footer>
+
+  </div>
+  
+</body>
+</html>
